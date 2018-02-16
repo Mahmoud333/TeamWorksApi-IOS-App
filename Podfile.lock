@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.6.0)
+  - Decodable (0.6.0)
+  - lottie-ios (2.5.0)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Decodable
+  - lottie-ios
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Decodable: f0b95fa2fcf8633dd097aa8f7f09838ab3524f5d
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: e4b7fd4d4d3836e93a5e23735b94e057230ce9b7
+
+COCOAPODS: 1.2.1

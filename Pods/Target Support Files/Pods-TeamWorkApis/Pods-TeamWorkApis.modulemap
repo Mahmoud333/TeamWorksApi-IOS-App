@@ -1,0 +1,6 @@
+framework module Pods_TeamWorkApis {
+  umbrella header "Pods-TeamWorkApis-umbrella.h"
+
+  export *
+  module * { export * }
+}
