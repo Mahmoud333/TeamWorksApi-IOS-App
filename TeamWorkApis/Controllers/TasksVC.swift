@@ -34,7 +34,7 @@ class TasksVC: MABaseViewController {
     }
     
     func fetchAlltasks() {
-        AllTasksServices.instance.fetchAllTasks { (success) in
+        AllTasksServices.instance.fetchAllTasks(user: USERNAME, password: PASSWORD) { (success) in
             if success {
                 self.displayedFile4 = AllTasksServices.instance.allTasks
                 self.tableView.reloadData()
@@ -43,7 +43,7 @@ class TasksVC: MABaseViewController {
     }
     
     func fetchTasks() {
-        TasksServices.instance.fetchProjects(id: project!.id) { (success) in
+        TasksServices.instance.fetchProjects(user: USERNAME, password: PASSWORD,id: project!.id) { (success) in
             if success {
                 self.displayedFile2 = TasksServices.instance.tasks
                 self.tableView.reloadData()

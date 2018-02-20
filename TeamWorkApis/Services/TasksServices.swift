@@ -21,13 +21,13 @@ class TasksServices {
     private var _tasks: File2?
     
     
-    func fetchProjects(id: String,completion: @escaping(Bool)->()) {
+    func fetchProjects(user: String, password: String, id: String,completion: @escaping(Bool)->()) {
         
         let url = "https://mahmoudsmglllllllll.teamwork.com/projects/\(id)/tasklists.json"
         print(url)
 
         Alamofire.request(url)
-            .authenticate(user: TOKEN, password: "x")
+            .authenticate(user: user, password: password)
             .responseData { response in 
                 
                 switch response.result {

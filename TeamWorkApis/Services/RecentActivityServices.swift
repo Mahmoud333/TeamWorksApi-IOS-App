@@ -23,13 +23,13 @@ class RecentActivityServices {
     
     private var _recentActivity: File3?
     
-    func fetchActivityServices(completion: @escaping COMPLETION_ACTIVITY) {
+    func fetchActivityServices(user: String, password: String,completion: @escaping COMPLETION_ACTIVITY) {
         
         
         let url = "https://mahmoudsmglllllllll.teamwork.com/latestActivity.json"
         
         Alamofire.request(url)
-            .authenticate(user: TOKEN, password: "x")
+            .authenticate(user: user, password: password)
             .responseData { response in //.responseData
                 
                 switch response.result {

@@ -32,7 +32,7 @@ class ActivityVC: MABaseViewController {
 
     
     func fetchActivitys() {
-        RecentActivityServices.instance.fetchActivityServices { (success) in
+        RecentActivityServices.instance.fetchActivityServices(user: USERNAME, password: PASSWORD) { (success) in
             if success {
                 self.displayedFile3 = RecentActivityServices.instance.recentActivity
                 self.tableView.reloadData()

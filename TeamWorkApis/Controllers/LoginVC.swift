@@ -11,10 +11,13 @@ import Alamofire
 
 class LoginVC: UIViewController {
     
+    @IBOutlet weak var emailTF: UITextField!
+    
+    @IBOutlet weak var passwordTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AuthenticateService.instance.AuthenticateAccount()
 
     }
 
@@ -29,6 +32,15 @@ class LoginVC: UIViewController {
         //present(dvc, animated: true, completion: nil)
         
         //Go To RevealVC
+        USERNAME = emailTF.text!
+        
+        if passwordTF!.text == "" || passwordTF!.text == nil {  //used api key
+            PASSWORD = "x"
+        } else { PASSWORD = passwordTF.text! }  //used email
+        
+        
+        
+        AuthenticateService.instance.AuthenticateAccount(user: USERNAME, password: PASSWORD)
         let dvc = storyboard?.instantiateViewController(withIdentifier: "RevealVC") as! SWRevealViewController
         present(dvc, animated: true, completion: nil)
         

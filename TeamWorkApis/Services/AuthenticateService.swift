@@ -12,12 +12,12 @@ class AuthenticateService {
     
     static var instance = AuthenticateService()
     
-    func AuthenticateAccount() {
+    func AuthenticateAccount(user: String, password: String) {
         
         let url = "https://mahmoudsmglllllllll.teamwork.com/projects.json"
         
         Alamofire.request(url)
-            .authenticate(user: TOKEN, password: "x")
+            .authenticate(user: user, password: password) //(user: TOKEN, password: "x")
         
     }
     

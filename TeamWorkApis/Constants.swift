@@ -13,9 +13,9 @@ import Foundation
 
 //key or token
 ////twp_bagL1MiLGbIUFTiJf4qYOciwKiXo
-var PASSWORD = "66922292"
 var TOKEN = "twp_bagL1MiLGbIUFTiJf4qYOciwKiXo"
-
+var USERNAME = ""
+var PASSWORD = ""
 
 //get all tasks
 // /projects/{project_id}/tasklists.json

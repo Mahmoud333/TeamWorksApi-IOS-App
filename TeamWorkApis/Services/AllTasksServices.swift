@@ -24,12 +24,12 @@ class AllTasksServices {
     
     var _allTasks: File4?
     
-    func fetchAllTasks(completion: @escaping COMPLETION_ALLTASKS){
+    func fetchAllTasks(user: String, password: String,completion: @escaping COMPLETION_ALLTASKS){
         
         let url = "https://mahmoudsmglllllllll.teamwork.com/tasks.json"
         
         Alamofire.request(url)
-            .authenticate(user: TOKEN, password: "x")
+            .authenticate(user: user, password: password)
             .responseData { response in //.responseData
                 
                 switch response.result {

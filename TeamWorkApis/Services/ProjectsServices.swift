@@ -23,12 +23,12 @@ class ProjectsServices {
     private var _projects: File?
 
     
-    func fetchProjects(completion: @escaping(Bool)->()) {
+    func fetchProjects(user: String, password: String, completion: @escaping(Bool)->()) {
         
         let url = "https://mahmoudsmglllllllll.teamwork.com/projects.json"
         
         Alamofire.request(url)
-            .authenticate(user: TOKEN, password: "x")
+            .authenticate(user: user, password: password)
             .responseData { response in //.responseData
                 
                 switch response.result {

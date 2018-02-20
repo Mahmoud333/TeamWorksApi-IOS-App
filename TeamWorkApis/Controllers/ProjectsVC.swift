@@ -32,7 +32,7 @@ class ProjectsVC: MABaseViewController {
     }
 
     func fetchProjects() {
-        ProjectsServices.instance.fetchProjects { (success) in
+        ProjectsServices.instance.fetchProjects(user: USERNAME, password: PASSWORD) { (success) in
             if success {
                 self.displayedFiles1 = ProjectsServices.instance.projects
                 self.tableView.reloadData()
